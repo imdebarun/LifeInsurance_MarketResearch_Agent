@@ -1,0 +1,214 @@
+2026-05-03 13:41:13  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:41:13  INFO      orchestrator — STEP 1/5 — Scraping IRDAI (NBP, market share, policies)...
+2026-05-03 13:41:13  INFO      scrapers.irdai_scraper — Attempting IRDAI HTML scrape...
+2026-05-03 13:41:22  WARNING   scrapers.irdai_scraper — IRDAI HTML scrape failed: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/web/guest/statistical-data
+2026-05-03 13:41:23  INFO      scrapers.irdai_scraper — Attempting IRDAI PDF extraction...
+2026-05-03 13:41:23  INFO      scrapers.irdai_scraper — Downloading PDF: https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf
+2026-05-03 13:41:31  WARNING   scrapers.irdai_scraper — PDF extraction failed for https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf
+2026-05-03 13:41:31  INFO      scrapers.irdai_scraper — Downloading PDF: https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf
+2026-05-03 13:41:39  WARNING   scrapers.irdai_scraper — PDF extraction failed for https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf
+2026-05-03 13:41:39  WARNING   scrapers.irdai_scraper — All IRDAI live sources failed — using seed data.
+2026-05-03 13:41:39  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/irdai_20260503_134139.csv  (23 rows)
+2026-05-03 13:41:39  INFO      orchestrator — IRDAI: 23 records, source=seed_fallback
+2026-05-03 13:41:40  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:41:40  INFO      orchestrator — STEP 2/5 — Scraping CSR, Solvency, Persistency data...
+2026-05-03 13:41:40  INFO      scrapers.aggregator_scraper — Scraping PolicyBazaar CSR page...
+2026-05-03 13:41:41  WARNING   scrapers.aggregator_scraper — Failed to fetch https://www.policybazaar.com/life-insurance/claim-settlement-ratio/: 404 Client Error: Not Found for url: https://www.policybazaar.com/life-insurance/claim-settlement-ratio/
+2026-05-03 13:41:41  WARNING   scrapers.aggregator_scraper — Using seed CSR/solvency data.
+2026-05-03 13:41:41  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/csr_solvency_20260503_134141.csv  (23 rows)
+2026-05-03 13:41:41  INFO      orchestrator — CSR/Solvency: 23 records
+2026-05-03 13:41:42  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:41:42  INFO      orchestrator — STEP 3/5 — Scraping Wikipedia metadata...
+2026-05-03 13:41:42  INFO      scrapers.aggregator_scraper — Scraping Wikipedia insurance companies list...
+2026-05-03 13:41:43  INFO      scrapers.aggregator_scraper — Wikipedia: found 74 companies.
+2026-05-03 13:41:43  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/wikipedia_20260503_134143.csv  (74 rows)
+2026-05-03 13:41:43  INFO      orchestrator — Wikipedia: 74 records
+2026-05-03 13:41:44  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:41:44  INFO      orchestrator — STEP 4/5 — Scraping news RSS feeds...
+2026-05-03 13:41:44  INFO      scrapers.news_scraper — Fetching RSS feed: Economic Times - Insurance
+2026-05-03 13:41:44  INFO      scrapers.news_scraper — Fetching RSS feed: Economic Times - Finance
+2026-05-03 13:41:44  INFO      scrapers.news_scraper — Fetching RSS feed: Business Standard - Insurance
+2026-05-03 13:41:44  WARNING   scrapers.news_scraper — Feed parse warning for Business Standard - Insurance: <unknown>:10:2: mismatched tag
+2026-05-03 13:41:44  INFO      scrapers.news_scraper — Fetching RSS feed: Money Control - Insurance
+2026-05-03 13:41:45  INFO      scrapers.news_scraper — Fetching RSS feed: LiveMint - Insurance
+2026-05-03 13:41:45  INFO      scrapers.news_scraper — News scraper: collected 38 relevant articles.
+2026-05-03 13:41:45  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/news_20260503_134145.csv  (38 rows)
+2026-05-03 13:41:45  INFO      orchestrator — News: 38 articles collected
+2026-05-03 13:41:45  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:41:45  INFO      orchestrator — STEP 5/5 — Merging, normalizing, ranking, and exporting...
+2026-05-03 13:41:45  INFO      pipeline.normalizer — Starting merge of all data sources...
+2026-05-03 13:42:52  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:42:52  INFO      orchestrator — STEP 1/5 — Scraping IRDAI (NBP, market share, policies)...
+2026-05-03 13:42:52  INFO      scrapers.irdai_scraper — Attempting IRDAI HTML scrape...
+2026-05-03 13:43:08  WARNING   scrapers.irdai_scraper — IRDAI HTML scrape failed: HTTPSConnectionPool(host='irdai.gov.in', port=443): Read timed out. (read timeout=15)
+2026-05-03 13:43:09  INFO      scrapers.irdai_scraper — Attempting IRDAI PDF extraction...
+2026-05-03 13:43:09  INFO      scrapers.irdai_scraper — Downloading PDF: https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf
+2026-05-03 13:43:17  WARNING   scrapers.irdai_scraper — PDF extraction failed for https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf
+2026-05-03 13:43:17  INFO      scrapers.irdai_scraper — Downloading PDF: https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf
+2026-05-03 13:43:25  WARNING   scrapers.irdai_scraper — PDF extraction failed for https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf
+2026-05-03 13:43:25  WARNING   scrapers.irdai_scraper — All IRDAI live sources failed — using seed data.
+2026-05-03 13:43:25  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/irdai_20260503_134325.csv  (23 rows)
+2026-05-03 13:43:25  INFO      orchestrator — IRDAI: 23 records, source=seed_fallback
+2026-05-03 13:43:26  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:43:26  INFO      orchestrator — STEP 2/5 — Scraping CSR, Solvency, Persistency data...
+2026-05-03 13:43:26  INFO      scrapers.aggregator_scraper — Scraping PolicyBazaar CSR page...
+2026-05-03 13:43:27  WARNING   scrapers.aggregator_scraper — Failed to fetch https://www.policybazaar.com/life-insurance/claim-settlement-ratio/: 404 Client Error: Not Found for url: https://www.policybazaar.com/life-insurance/claim-settlement-ratio/
+2026-05-03 13:43:27  WARNING   scrapers.aggregator_scraper — Using seed CSR/solvency data.
+2026-05-03 13:43:27  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/csr_solvency_20260503_134327.csv  (23 rows)
+2026-05-03 13:43:27  INFO      orchestrator — CSR/Solvency: 23 records
+2026-05-03 13:43:28  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:43:28  INFO      orchestrator — STEP 3/5 — Scraping Wikipedia metadata...
+2026-05-03 13:43:28  INFO      scrapers.aggregator_scraper — Scraping Wikipedia insurance companies list...
+2026-05-03 13:43:28  INFO      scrapers.aggregator_scraper — Wikipedia: found 74 companies.
+2026-05-03 13:43:28  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/wikipedia_20260503_134328.csv  (74 rows)
+2026-05-03 13:43:28  INFO      orchestrator — Wikipedia: 74 records
+2026-05-03 13:43:29  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:43:29  INFO      orchestrator — STEP 4/5 — Scraping news RSS feeds...
+2026-05-03 13:43:29  INFO      scrapers.news_scraper — Fetching RSS feed: Economic Times - Insurance
+2026-05-03 13:43:29  INFO      scrapers.news_scraper — Fetching RSS feed: Economic Times - Finance
+2026-05-03 13:43:30  INFO      scrapers.news_scraper — Fetching RSS feed: Business Standard - Insurance
+2026-05-03 13:43:30  WARNING   scrapers.news_scraper — Feed parse warning for Business Standard - Insurance: <unknown>:10:2: mismatched tag
+2026-05-03 13:43:30  INFO      scrapers.news_scraper — Fetching RSS feed: Money Control - Insurance
+2026-05-03 13:43:30  INFO      scrapers.news_scraper — Fetching RSS feed: LiveMint - Insurance
+2026-05-03 13:43:30  INFO      scrapers.news_scraper — News scraper: collected 38 relevant articles.
+2026-05-03 13:43:30  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/news_20260503_134330.csv  (38 rows)
+2026-05-03 13:43:30  INFO      orchestrator — News: 38 articles collected
+2026-05-03 13:43:30  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 13:43:30  INFO      orchestrator — STEP 5/5 — Merging, normalizing, ranking, and exporting...
+2026-05-03 13:43:30  INFO      pipeline.normalizer — Starting merge of all data sources...
+2026-05-03 13:43:30  INFO      pipeline.normalizer — Merged DataFrame: 23 companies, 16 columns.
+2026-05-03 13:43:30  INFO      pipeline.ranker — Ranking complete: 23 companies ranked.
+2026-05-03 13:43:30  INFO      orchestrator — Master CSV → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/life_insurance_master.csv  (23 rows, 16 cols)
+2026-05-03 13:43:30  INFO      orchestrator — Rankings CSV → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/company_rankings.csv  (23 rows)
+2026-05-03 13:43:30  INFO      orchestrator — News CSV → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/news_insights.csv  (38 rows)
+2026-05-03 13:43:30  INFO      orchestrator — Pipeline completed in 37.9s
+2026-05-03 15:11:09  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 15:11:09  INFO      orchestrator — STEP 1/6 — Scraping IRDAI (NBP, market share, policies)...
+2026-05-03 15:11:09  INFO      scrapers.irdai_scraper — Attempting IRDAI HTML scrape...
+2026-05-03 15:11:17  WARNING   scrapers.irdai_scraper — IRDAI HTML scrape failed: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/web/guest/statistical-data
+2026-05-03 15:11:18  INFO      scrapers.irdai_scraper — Attempting IRDAI PDF extraction...
+2026-05-03 15:11:18  INFO      scrapers.irdai_scraper — Downloading PDF: https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf
+2026-05-03 15:11:26  WARNING   scrapers.irdai_scraper — PDF extraction failed for https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/documents/37343/6955817/Annual+Report+2022-23.pdf
+2026-05-03 15:11:26  INFO      scrapers.irdai_scraper — Downloading PDF: https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf
+2026-05-03 15:11:35  WARNING   scrapers.irdai_scraper — PDF extraction failed for https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf: 504 Server Error: Gateway Time-out for url: https://irdai.gov.in/documents/37343/5419466/IRDAI_Annual_Report_2021-22.pdf
+2026-05-03 15:11:35  WARNING   scrapers.irdai_scraper — All IRDAI live sources failed — using seed data.
+2026-05-03 15:11:35  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/irdai_20260503_151135.csv  (23 rows)
+2026-05-03 15:11:35  INFO      orchestrator — IRDAI: 23 records  [source=seed_fallback]
+2026-05-03 15:11:36  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 15:11:36  INFO      orchestrator — STEP 2/6 — Scraping individual company Public Disclosure pages...
+2026-05-03 15:11:36  INFO      orchestrator —          (visiting each insurer's website for L-22 / L-32 PDFs)
+2026-05-03 15:11:36  INFO      scrapers.company_disclosure_scraper — Starting individual company website disclosure scrape...
+2026-05-03 15:11:36  INFO      scrapers.company_disclosure_scraper —   [1/21] SBI Life Insurance
+2026-05-03 15:11:37  INFO      scrapers.company_disclosure_scraper —     Found 1 PDF link(s) on https://www.sbilife.co.in/en/about-us/investor-relations
+2026-05-03 15:11:37  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.sbilife.co.in/documents/20118/962016/Code+of+Practices+and+Procedure...
+2026-05-03 15:11:39  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.sbilife.co.in/en/about-us/investor-relations/public-disclosure]: HTTPError: 404 Client Error: Not Found for url: https://www.sbilife.co.in/en/about-us/investor-relations/public-disclosure
+2026-05-03 15:11:39  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for SBI Life Insurance
+2026-05-03 15:11:41  INFO      scrapers.company_disclosure_scraper —   [2/21] HDFC Life Insurance
+2026-05-03 15:11:41  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.hdfclife.com/about-us/investor-relations/public-disclosures]: HTTPError: 404 Client Error: Not Found for url: https://www.hdfclife.com/about-us/investor-relations/public-disclosures
+2026-05-03 15:11:42  INFO      scrapers.company_disclosure_scraper —     Found 389 PDF link(s) on https://www.hdfclife.com/about-us/investor-relations
+2026-05-03 15:11:42  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.hdfclife.com/content/dam/hdfclifeinsurancecompany/about-us/pdf/inves...
+2026-05-03 15:12:16  INFO      scrapers.company_disclosure_scraper —     ✓ Extracted 4 KPIs from PDF
+2026-05-03 15:12:17  INFO      scrapers.company_disclosure_scraper —   [3/21] ICICI Prudential Life Insurance
+2026-05-03 15:12:17  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.iciciprulife.com/investor-relations/public-disclosure.html]: HTTPError: 403 Client Error: Forbidden for url: https://www.iciciprulife.com/investor-relations/public-disclosure.html
+2026-05-03 15:12:17  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for ICICI Prudential Life Insurance
+2026-05-03 15:12:19  INFO      scrapers.company_disclosure_scraper —   [4/21] Max Life Insurance
+2026-05-03 15:12:19  INFO      scrapers.company_disclosure_scraper —     Found 25 PDF link(s) on https://www.axismaxlife.com/newsroom/public-disclosures
+2026-05-03 15:12:19  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.axismaxlife.com/static-page/assets/homepage/assets/content/dam/neo/p...
+2026-05-03 15:12:20  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.axismaxlife.com/static-page/assets/homepage/assets/content/dam/neo/p...
+2026-05-03 15:12:23  INFO      scrapers.company_disclosure_scraper —     Found 9 PDF link(s) on https://www.maxlifeinsurance.com/about-us/investor-relations
+2026-05-03 15:12:23  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.maxlifeinsurance.com/static-page/assets/homepage/assets/content/dam/...
+2026-05-03 15:12:25  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.maxlifeinsurance.com/static-page/assets/homepage/assets/content/dam/...
+2026-05-03 15:12:27  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Max Life Insurance
+2026-05-03 15:12:30  INFO      scrapers.company_disclosure_scraper —   [5/21] Bajaj Allianz Life Insurance
+2026-05-03 15:12:30  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.bajajallianzlife.com/about-us/financial-disclosures.html]: HTTPError: 404 Client Error: Not Found for url: https://www.bajajlifeinsurance.com/about-us/financial-disclosures.html
+2026-05-03 15:12:31  INFO      scrapers.company_disclosure_scraper —     Found 0 PDF link(s) on https://www.bajajallianzlife.com/about-us.html
+2026-05-03 15:12:32  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Bajaj Allianz Life Insurance
+2026-05-03 15:12:34  INFO      scrapers.company_disclosure_scraper —   [6/21] Tata AIA Life Insurance
+2026-05-03 15:12:34  INFO      scrapers.company_disclosure_scraper —     Found 0 PDF link(s) on https://www.tataaia.com/public-disclosures/public-disclosures.html
+2026-05-03 15:12:35  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Tata AIA Life Insurance
+2026-05-03 15:12:37  INFO      scrapers.company_disclosure_scraper —   [7/21] Aditya Birla Sun Life Insurance
+2026-05-03 15:12:37  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://lifeinsurance.adityabirlacapital.com/about-us/investor-relations]: HTTPError: 404 Client Error: Not Found for url: https://lifeinsurance.adityabirlacapital.com/about-us/investor-relations
+2026-05-03 15:12:37  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Aditya Birla Sun Life Insurance
+2026-05-03 15:12:39  INFO      scrapers.company_disclosure_scraper —   [8/21] Kotak Mahindra Life Insurance
+2026-05-03 15:12:39  INFO      scrapers.company_disclosure_scraper —     Found 0 PDF link(s) on https://insurance.kotak.com/common/public_disclosure.php
+2026-05-03 15:12:41  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.kotaklife.com/investor-relations]: HTTPError: 404 Client Error: Not Found for url: https://www.kotaklife.com/investor-relations
+2026-05-03 15:12:41  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Kotak Mahindra Life Insurance
+2026-05-03 15:12:43  INFO      scrapers.company_disclosure_scraper —   [9/21] PNB MetLife India Insurance
+2026-05-03 15:12:43  INFO      scrapers.company_disclosure_scraper —     Found 0 PDF link(s) on https://www.pnbmetlife.com/investor-relations.html
+2026-05-03 15:12:44  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for PNB MetLife India Insurance
+2026-05-03 15:12:46  INFO      scrapers.company_disclosure_scraper —   [10/21] Canara HSBC Life Insurance
+2026-05-03 15:12:47  INFO      scrapers.company_disclosure_scraper —     Found 2 PDF link(s) on https://www.canarahsbclife.com/investor-relations
+2026-05-03 15:12:47  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.canarahsbclife.com/content/dam/chli/pdfs/wpc-disclosures-fy-23-24.pd...
+2026-05-03 15:12:47  INFO      scrapers.company_disclosure_scraper —     ↳ Downloading PDF: https://www.canarahsbclife.com/content/dam/chli/pdfs/wpc-disclosures.pdf...
+2026-05-03 15:12:49  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Canara HSBC Life Insurance
+2026-05-03 15:12:51  INFO      scrapers.company_disclosure_scraper —   [11/21] IndiaFirst Life Insurance
+2026-05-03 15:12:53  INFO      scrapers.company_disclosure_scraper —     Found 0 PDF link(s) on https://www.indiafirstlife.com/public-disclosure
+2026-05-03 15:12:55  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for IndiaFirst Life Insurance
+2026-05-03 15:12:57  INFO      scrapers.company_disclosure_scraper —   [12/21] Edelweiss Tokio Life Insurance
+2026-05-03 15:12:57  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.edelweisslife.in/about-us/investors]: HTTPError: 404 Client Error: Not Found for url: https://www.edelweisslife.in/about-us/investors
+2026-05-03 15:12:57  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Edelweiss Tokio Life Insurance
+2026-05-03 15:12:59  INFO      scrapers.company_disclosure_scraper —   [13/21] Future Generali India Life Insurance
+2026-05-03 15:12:59  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.futuregenerali.in/about-us/investor-relations]: ConnectionError: HTTPSConnectionPool(host='www.futuregenerali.in', port=443): Max retries exceeded with url: /about-us/investor-relations (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x44761e210>: Failed to resolve 'www.futuregenerali.in' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-03 15:12:59  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Future Generali India Life Insurance
+2026-05-03 15:13:01  INFO      scrapers.company_disclosure_scraper —   [14/21] Pramerica Life Insurance
+2026-05-03 15:13:26  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.dhflpramerica.com/investor-relations]: ConnectTimeout: HTTPSConnectionPool(host='www.dhflpramerica.com', port=443): Max retries exceeded with url: /investor-relations (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x44761ead0>, 'Connection to www.dhflpramerica.com timed out. (connect timeout=12)'))
+2026-05-03 15:13:26  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Pramerica Life Insurance
+2026-05-03 15:13:28  INFO      scrapers.company_disclosure_scraper —   [15/21] Shriram Life Insurance
+2026-05-03 15:13:31  INFO      scrapers.company_disclosure_scraper —     Found 0 PDF link(s) on https://www.shriramlife.in/slp/publicdisclosure.aspx
+2026-05-03 15:13:33  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Shriram Life Insurance
+2026-05-03 15:13:34  INFO      scrapers.company_disclosure_scraper —   [16/21] Bharti AXA Life Insurance
+2026-05-03 15:13:34  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.bharti-axalife.com/about-us/investor-relations]: SSLError: HTTPSConnectionPool(host='www.bharti-axalife.com', port=443): Max retries exceeded with url: /about-us/investor-relations (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)')))
+2026-05-03 15:13:34  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Bharti AXA Life Insurance
+2026-05-03 15:13:36  INFO      scrapers.company_disclosure_scraper —   [17/21] Reliance Nippon Life Insurance
+2026-05-03 15:13:36  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.reliancenipponlife.com/about-us/investor-relations]: HTTPError: 404 Client Error: Not Found for url: https://www.indusindnipponlife.com/about-us/investor-relations
+2026-05-03 15:13:36  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Reliance Nippon Life Insurance
+2026-05-03 15:13:38  INFO      scrapers.company_disclosure_scraper —   [18/21] Aviva Life Insurance
+2026-05-03 15:13:39  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.avivaindia.com/about-aviva/investor-relations]: HTTPError: 404 Client Error: Not Found for url: https://www.avivaindia.com/about-aviva/investor-relations
+2026-05-03 15:13:39  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Aviva Life Insurance
+2026-05-03 15:13:40  INFO      scrapers.company_disclosure_scraper —   [19/21] Star Union Dai-ichi Life Insurance
+2026-05-03 15:13:41  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.sudlife.in/about-us/public-disclosure]: HTTPError: 403 Client Error: Forbidden for url: https://www.sudlife.in/about-us/public-disclosure
+2026-05-03 15:13:41  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Star Union Dai-ichi Life Insurance
+2026-05-03 15:13:42  INFO      scrapers.company_disclosure_scraper —   [20/21] Aegon Life Insurance
+2026-05-03 15:13:43  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.aegonlife.com/about-aegon-life/investor-relations]: HTTPError: 404 Client Error: Not Found for url: https://www.bandhanlife.com/about-aegon-life/investor-relations
+2026-05-03 15:13:43  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Aegon Life Insurance
+2026-05-03 15:13:45  INFO      scrapers.company_disclosure_scraper —   [21/21] Bandhan Life Insurance
+2026-05-03 15:13:46  WARNING   scrapers.company_disclosure_scraper —   ✗ Page fetch failed [https://www.bandhanlife.com/investor-relations]: HTTPError: 404 Client Error: Not Found for url: https://www.bandhanlife.com/investor-relations
+2026-05-03 15:13:46  INFO      scrapers.company_disclosure_scraper —     → No live data extracted for Bandhan Life Insurance
+2026-05-03 15:13:48  INFO      scrapers.company_disclosure_scraper — Company website scrape complete: 1/21 companies yielded live KPI data.
+2026-05-03 15:13:48  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/company_websites_20260503_151348.csv  (21 rows)
+2026-05-03 15:13:48  INFO      orchestrator — Company websites: 1/21 companies yielded live KPI data
+2026-05-03 15:13:49  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 15:13:49  INFO      orchestrator — STEP 3/6 — Scraping CSR cross-check (PolicyBazaar) & Wikipedia metadata...
+2026-05-03 15:13:49  INFO      scrapers.aggregator_scraper — Scraping PolicyBazaar CSR page...
+2026-05-03 15:13:49  WARNING   scrapers.aggregator_scraper — Failed to fetch https://www.policybazaar.com/life-insurance/claim-settlement-ratio/: 404 Client Error: Not Found for url: https://www.policybazaar.com/life-insurance/claim-settlement-ratio/
+2026-05-03 15:13:49  WARNING   scrapers.aggregator_scraper — Using seed CSR/solvency data.
+2026-05-03 15:13:49  INFO      scrapers.aggregator_scraper — Scraping Wikipedia insurance companies list...
+2026-05-03 15:13:50  INFO      scrapers.aggregator_scraper — Wikipedia: found 74 companies.
+2026-05-03 15:13:50  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/csr_solvency_20260503_151350.csv  (23 rows)
+2026-05-03 15:13:50  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/wikipedia_20260503_151350.csv  (74 rows)
+2026-05-03 15:13:50  INFO      orchestrator — CSR/Solvency: 23 records | Wikipedia: 74 records
+2026-05-03 15:13:51  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 15:13:51  INFO      orchestrator — STEP 4/6 — Scraping news RSS feeds (ET, LiveMint, MoneyControl)...
+2026-05-03 15:13:51  INFO      scrapers.news_scraper — Fetching RSS feed: Economic Times - Insurance
+2026-05-03 15:13:51  INFO      scrapers.news_scraper — Fetching RSS feed: Economic Times - Finance
+2026-05-03 15:13:52  INFO      scrapers.news_scraper — Fetching RSS feed: Business Standard - Insurance
+2026-05-03 15:13:52  WARNING   scrapers.news_scraper — Feed parse warning for Business Standard - Insurance: <unknown>:10:2: mismatched tag
+2026-05-03 15:13:52  INFO      scrapers.news_scraper — Fetching RSS feed: Money Control - Insurance
+2026-05-03 15:13:52  INFO      scrapers.news_scraper — Fetching RSS feed: LiveMint - Insurance
+2026-05-03 15:13:52  INFO      scrapers.news_scraper — News scraper: collected 38 relevant articles.
+2026-05-03 15:13:52  INFO      orchestrator — Raw saved → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/raw/news_20260503_151352.csv  (38 rows)
+2026-05-03 15:13:52  INFO      orchestrator — News: 38 relevant articles collected
+2026-05-03 15:13:52  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 15:13:52  INFO      orchestrator — STEP 5/6 — Merging all sources, normalizing, computing rankings...
+2026-05-03 15:13:52  INFO      pipeline.normalizer — Starting merge of all data sources...
+2026-05-03 15:13:52  INFO      pipeline.normalizer — Company website overlay: 1 companies updated.
+2026-05-03 15:13:52  INFO      pipeline.normalizer — Merged DataFrame: 23 companies, 16 columns.
+2026-05-03 15:13:52  INFO      pipeline.ranker — Ranking complete: 23 companies ranked.
+2026-05-03 15:13:52  INFO      orchestrator — ══════════════════════════════════════════════════
+2026-05-03 15:13:52  INFO      orchestrator — STEP 6/6 — Exporting CSVs and building source coverage report...
+2026-05-03 15:13:52  INFO      pipeline.normalizer — Source coverage report: 23 companies, avg completeness 100.0%
+2026-05-03 15:13:52  INFO      orchestrator — Master CSV    → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/life_insurance_master.csv  (23 rows, 16 cols)
+2026-05-03 15:13:52  INFO      orchestrator — Rankings CSV  → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/company_rankings.csv  (23 rows)
+2026-05-03 15:13:52  INFO      orchestrator — News CSV      → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/news_insights.csv  (38 rows)
+2026-05-03 15:13:52  INFO      orchestrator — Coverage CSV  → /Users/imdebarun/Documents/Debarun/GenAI_projects/antigravity_experiments/life_insurance_pipeline/data/source_coverage_report.csv  (23 rows)
+2026-05-03 15:13:52  INFO      orchestrator — Pipeline completed in 163.4s
