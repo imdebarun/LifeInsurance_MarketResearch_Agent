@@ -1,0 +1,24 @@
+﻿company_name,company_type,new_business_premium_cr,claim_settlement_ratio_pct,solvency_ratio,rank_by_nbp,rank_by_csr,rank_by_solvency,composite_score,rank_overall
+SBI Life Insurance,Private,24989,97.05,2.12,1,14,10,0.767,1
+Bajaj Allianz Life Insurance,Private,9012,99.02,5.88,4,4,2,0.6297,2
+ICICI Prudential Life Insurance,Private,15698,97.9,2.1,2,10,11,0.6264,3
+Max Life Insurance,Private,10124,99.65,2.06,3,1,13,0.5539,4
+Tata AIA Life Insurance,Private,7856,99.01,2.08,5,5,12,0.5115,5
+Kotak Mahindra Life Insurance,Private,5621,98.82,3.12,7,6,5,0.5011,6
+HDFC Life Insurance,Private,13,88.3,10.0,23,21,1,0.4844,7
+Aditya Birla Sun Life Insurance,Private,5943,97.54,1.76,6,11,20,0.4576,8
+Aegon Life Insurance,Private,398,99.27,4.11,19,2,3,0.4479,9
+Canara HSBC Life Insurance,Private,2934,98.44,2.54,9,8,6,0.439,10
+Bharti AXA Life Insurance,Private,743,99.05,3.47,17,3,4,0.4345,11
+PNB MetLife India Insurance,Private,3789,97.33,1.98,8,12,15,0.4267,12
+Reliance Nippon Life Insurance,Private,1123,98.67,2.14,13,7,9,0.4018,13
+Edelweiss Tokio Life Insurance,Private,1243,98.09,2.29,12,9,8,0.4018,13
+IndiaFirst Life Insurance,Private,2156,96.81,1.68,10,16,21,0.3874,15
+Star Union Dai-ichi Life Insurance,Private,876,96.86,2.35,15,15,7,0.3849,16
+Pramerica Life Insurance,Private,876,97.12,1.89,15,13,17,0.3755,17
+Future Generali India Life Insurance,Private,987,96.23,1.77,14,18,19,0.3651,18
+Aviva Life Insurance,Private,512,96.48,1.92,18,17,16,0.364,19
+Bandhan Life Insurance,Private,312,94.5,1.85,20,19,18,0.3388,20
+Credit Access Life Insurance,Private,198,93.1,1.61,21,20,22,0.3164,21
+Shriram Life Insurance,Private,1654,87.44,2.01,11,22,14,0.2926,22
+Sahara India Life Insurance,Private,145,65.28,0.46,22,23,23,0.0021,23
