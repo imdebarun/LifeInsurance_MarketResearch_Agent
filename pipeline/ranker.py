@@ -87,7 +87,7 @@ def compute_rankings(master_df: pd.DataFrame, weights: dict = None) -> pd.DataFr
     df_rank["rank_overall"] = df_rank["composite_score"].rank(ascending=False, method="min").astype(int)
 
     # Build ranking output
-    output_cols = ["company_name", "company_type"]
+    output_cols = ["company_name", "company_type", "market_share_pct", "private_sector_market_share_pct"]
     for col in metric_cols:
         if col in df_rank.columns:
             output_cols.append(col)

@@ -36,6 +36,7 @@ from scrapers.aggregator_scraper import get_csr_solvency_data, get_wiki_metadata
 from scrapers.news_scraper import scrape_rss_news
 from pipeline.normalizer import merge_all, reorder_columns, build_source_report
 from pipeline.ranker import compute_rankings
+from pipeline.historical_store import save_and_export_dashboard_data
 
 # ── Configuration ────────────────────────────────────────────────────────────
 BASE_DIR = Path(__file__).parent
@@ -80,10 +81,10 @@ def print_banner():
     """Print pipeline banner."""
     banner = """
 ╔════════════════════════════════════════════════════════════════════════════╗
-║     🇮🇳  Life Insurance India — Data Extraction Pipeline v2 ✨            ║
-║     Scope : Private Insurers Only (23 companies, excl. LIC)              ║
-║     Sources: IRDAI · Company Websites (Updated URLs) · Wikipedia · RSS   ║
-║     Features: Retry Logic · Better PDF Extraction · Live Reporting      ║
+║     🇮🇳  Life Insurance India — Data Extraction Pipeline v2 ✨               ║
+║     Scope : Private Insurers Only (23 companies, excl. LIC)                ║
+║     Sources: IRDAI · Company Websites (Updated URLs) · Wikipedia · RSS     ║
+║     Features: Retry Logic · Better PDF Extraction · Live Reporting         ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 """
     print(banner)
@@ -104,9 +105,10 @@ def print_summary(
     print("\n" + "═" * 80)
     print("  📊  PIPELINE v2 SUMMARY")
     print("═" * 80)
-    print(f"  Companies extracted          : {len(master_df)}")
-    print(f"  Metrics per company          : {len(master_df.columns)}")
+    print(f"  Companies extracted          : {len(master_df['company_name'].unique())}")
+    print(f"  Total records (inc. history) : {len(master_df)}")
     print(f"  Live KPIs from company sites : {live_count}/{len(company_web_df)} (v2)")
+    print(f"  Historical periods found     : {master_df['data_as_of'].nunique()}")
     print(f"  Companies ranked             : {len(rankings_df)}")
     print(f"  News articles scraped        : {len(news_df)}")
     print("═" * 80)
@@ -252,6 +254,11 @@ def run_pipeline_v2():
 
     extraction_report_df.to_csv(EXTRACTION_REPORT_CSV, index=False, encoding="utf-8-sig")
     logger.info(f"Extraction CSV → {EXTRACTION_REPORT_CSV}  ({len(extraction_report_df)} rows) ✨ NEW")
+
+    # ── Step 7: Historical Append & JSON Export for Dashboard ────────────
+    logger.info("═" * 80)
+    logger.info("STEP 7/7 — Storing historical data and generating dashboard JSONs...")
+    save_and_export_dashboard_data(master_df, rankings_df, news_df)
 
     elapsed = time.time() - start_time
     logger.info(f"Pipeline v2 completed in {elapsed:.1f}s")

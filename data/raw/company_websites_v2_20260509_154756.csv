@@ -1,0 +1,24 @@
+﻿company_name,source,source_url,scraped_at,extraction_success,kpis_extracted,new_business_premium_cr,claim_settlement_ratio_pct,solvency_ratio,policies_issued
+SBI Life Insurance,not_found,https://www.sbilife.co.in/en/about-us/investor-relations/public-disclosure,2026-05-09T15:38:11.385791,False,0,,,,
+HDFC Life Insurance,company_website_live,https://www.hdfclife.com/content/dam/hdfclifeinsurancecompany/about-us/pdf/investor-relations/financial-information/annual-reports/integrated-annual-report-fy-2024-2025.pdf,2026-05-09T15:38:53.838248,True,4,13.0,88.3,194.0,106759.0
+ICICI Prudential Life Insurance,company_website_live,https://www.iciciprulife.com/content/dam/icicipru/about-us/PublicDisclosures/fy2026/fy2026q1/Consolidated_Q1_FY_26.pdf,2026-05-09T15:39:15.801176,True,4,9.1,2.0,32.0,38.0
+Max Life Insurance,not_found,https://www.axismaxlife.com/newsroom/public-disclosures,2026-05-09T15:39:31.247431,False,0,,,,
+Bajaj Allianz Life Insurance,not_found,https://www.bajajlifeinsurance.com/about-us.html,2026-05-09T15:39:40.641793,False,0,,,,
+Tata AIA Life Insurance,not_found,https://www.tataaia.com/public-disclosures/public-disclosures.html,2026-05-09T15:39:54.310348,False,0,,,,
+Aditya Birla Sun Life Insurance,company_website_live,https://lifeinsurance.adityabirlacapital.com/uploads/Public_Disclosure_June_25_831c547f76.pdf,2026-05-09T15:41:28.120505,True,1,,,32.0,
+Kotak Mahindra Life Insurance,not_found,https://insurance.kotak.com/about-us/corporate-governance/public-disclosures,2026-05-09T15:41:41.375456,False,0,,,,
+PNB MetLife India Insurance,company_website_live,https://www.pnbmetlife.com/content/dam/pnb-metlife/docs/financial_disclosure/Apr%20June-20%20FY%2020-21_tcm47-77654.pdf,2026-05-09T15:41:49.802691,True,2,25.0,,2.04,
+Canara HSBC Life Insurance,company_website_live,https://www.canarahsbclife.com/content/dam/chli/pdf/public-disclosure/disclosure/65/website-disclosure-dec-25.pdf,2026-05-09T15:42:04.455010,True,4,31.6,10.0,55.0,67.0
+IndiaFirst Life Insurance,not_found,https://www.indiafirstlife.com/about-us/public-disclosure,2026-05-09T15:42:50.937418,False,0,,,,
+Edelweiss Tokio Life Insurance,company_website_live,https://www.edelweisslife.in/documents/20121/3041181/ELI+Annual+Report+2024-2025.pdf/374b0b46-9cc3-bd9e-6c48-323d982ff8b3?download=true,2026-05-09T15:43:05.620484,True,4,5.13,99.29,3.0,49973.0
+Future Generali India Life Insurance,company_website_live,https://life2.futuregenerali.in/media/vpccijfx/public-disclosure-for-the-quarter-ended-march-25-3.pdf,2026-05-09T15:43:17.106186,True,4,52.0,71.0,183.0,37.0
+Pramerica Life Insurance,company_website_live,https://pramericalife.in//admin/assets/pdf/pdfST/1763105311-Annual Report FY 2024-25 (2).pdf,2026-05-09T15:43:28.753227,True,4,11.0,32.0,232.0,48412.0
+Shriram Life Insurance,not_found,https://www.shriramlife.in/slp/publicdisclosure.aspx,2026-05-09T15:43:53.476023,False,0,,,,
+Bharti AXA Life Insurance,company_website_live,https://www.bhartiaxa.com/sites/default/files/PublicDisclosure/2025-2026/VotingReport%201QFY26.pdf,2026-05-09T15:45:38.526821,True,1,,,,25.0
+Reliance Nippon Life Insurance,company_website_live,https://www.reliancenipponlife.com/documents/34625/34746/134075122701582298.pdf,2026-05-09T15:46:05.375990,True,4,32.6,4.0,31.0,39.0
+Aviva Life Insurance,not_found,https://www.avivaindia.com/public-disclosure,2026-05-09T15:46:30.609914,False,0,,,,
+Star Union Dai-ichi Life Insurance,not_found,https://www.sudlife.in/public-disclosure,2026-05-09T15:46:35.948384,False,0,,,,
+Aegon Life Insurance,not_found,https://www.aegonlife.com/about-aegon-life/investor-relations,2026-05-09T15:46:49.273927,False,0,,,,
+Bandhan Life Insurance,not_found,https://www.bandhanlife.com/public-disclosure,2026-05-09T15:47:05.719070,False,0,,,,
+Credit Access Life Insurance,not_found,https://calife.in/public-disclosures/,2026-05-09T15:47:21.809797,False,0,,,,
+Sahara India Life Insurance,not_found,https://www.saharalife.com/AnnualReport.html,2026-05-09T15:47:55.324267,False,0,,,,

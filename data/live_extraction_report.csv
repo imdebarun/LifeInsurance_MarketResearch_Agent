@@ -1,0 +1,60 @@
+﻿company_name,source,extraction_success,kpis_extracted,extraction_rate_pct
+SBI Life Insurance,company_website_live,True,1,20.0
+SBI Life Insurance,company_website_live,True,1,20.0
+SBI Life Insurance,company_website_live,True,0,0.0
+HDFC Life Insurance,company_website_live,True,0,0.0
+ICICI Prudential Life Insurance,not_found,False,0,0.0
+Axis Max Life Insurance Limited,company_website_live,True,0,0.0
+Axis Max Life Insurance Limited,company_website_live,True,0,0.0
+Axis Max Life Insurance Limited,company_website_live,True,0,0.0
+Bajaj Life Insurance Limited,company_website_live,True,0,0.0
+Bajaj Life Insurance Limited,company_website_live,True,2,40.0
+Tata AIA Life Insurance,company_website_live,True,4,80.0
+Tata AIA Life Insurance,company_website_live,True,0,0.0
+Tata AIA Life Insurance,company_website_live,True,1,20.0
+Aditya Birla Sun Life Insurance,company_website_live,True,0,0.0
+Aditya Birla Sun Life Insurance,company_website_live,True,4,80.0
+Aditya Birla Sun Life Insurance,company_website_live,True,5,100.0
+Kotak Mahindra Life Insurance,company_website_live,True,0,0.0
+PNB MetLife India Insurance,company_website_live,True,2,40.0
+PNB MetLife India Insurance,company_website_live,True,2,40.0
+PNB MetLife India Insurance,company_website_live,True,2,40.0
+Canara HSBC Life Insurance,company_website_live,True,0,0.0
+Canara HSBC Life Insurance,company_website_live,True,0,0.0
+Canara HSBC Life Insurance,company_website_live,True,0,0.0
+IndiaFirst Life Insurance,company_website_live,True,0,0.0
+IndiaFirst Life Insurance,company_website_live,True,0,0.0
+Edelweiss Tokio Life Insurance,company_website_live,True,4,80.0
+Edelweiss Tokio Life Insurance,company_website_live,True,4,80.0
+Edelweiss Tokio Life Insurance,company_website_live,True,4,80.0
+Generali Central Life Insurance Company Limited,company_website_live,True,0,0.0
+Pramerica Life Insurance,company_website_live,True,0,0.0
+Pramerica Life Insurance,company_website_live,True,0,0.0
+Pramerica Life Insurance,company_website_live,True,0,0.0
+Shriram Life Insurance,company_website_live,True,0,0.0
+Bharti Life Insurance Company Limited,company_website_live,True,0,0.0
+Bharti Life Insurance Company Limited,company_website_live,True,1,20.0
+Bharti Life Insurance Company Limited,company_website_live,True,0,0.0
+IndusInd Nippon Life Insurance Company Limited,company_website_live,True,0,0.0
+IndusInd Nippon Life Insurance Company Limited,company_website_live,True,0,0.0
+Aviva Life Insurance,company_website_live,True,0,0.0
+Aviva Life Insurance,company_website_live,True,0,0.0
+Aviva Life Insurance,company_website_live,True,0,0.0
+Star Union Dai-ichi Life Insurance,not_found,False,0,0.0
+Aegon Life Insurance,company_website_live,True,1,20.0
+Aegon Life Insurance,company_website_live,True,0,0.0
+Aegon Life Insurance,company_website_live,True,0,0.0
+Bandhan Life Insurance,company_website_live,True,1,20.0
+Bandhan Life Insurance,company_website_live,True,1,20.0
+Bandhan Life Insurance,company_website_live,True,0,0.0
+Credit Access Life Insurance,not_found,False,0,0.0
+Sahara India Life Insurance,not_found,False,0,0.0
+Acko Life Insurance Limited,company_website_live,True,3,60.0
+Acko Life Insurance Limited,company_website_live,True,3,60.0
+Acko Life Insurance Limited,company_website_live,True,4,80.0
+Go Digit Life Insurance Limited,company_website_live,True,4,80.0
+Go Digit Life Insurance Limited,company_website_live,True,4,80.0
+Go Digit Life Insurance Limited,company_website_live,True,4,80.0
+Ageas Federal Life Insurance Company Limited,company_website_live,True,4,80.0
+Ageas Federal Life Insurance Company Limited,company_website_live,True,4,80.0
+Ageas Federal Life Insurance Company Limited,company_website_live,True,3,60.0

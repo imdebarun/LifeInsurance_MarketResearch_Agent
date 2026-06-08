@@ -1,7 +1,7 @@
 """
 Company Disclosure URLs Configuration (Updated May 2026)
 =========================================================
-Centralized configuration for all 23 private life insurers in India.
+Centralized configuration for all 26 private life insurers in India.
 
 Each company has:
   - Primary disclosure URL (main page to try first)
@@ -29,12 +29,12 @@ COMPANY_DISCLOSURE_PAGES = [
         "https://www.iciciprulife.com/about-us/investor-relations.html",
     ),
     (
-        "Max Life Insurance",
+        "Axis Max Life Insurance Limited",
         "https://www.axismaxlife.com/newsroom/public-disclosures",
         "https://www.maxfinancialservices.com/investor-relations",
     ),
     (
-        "Bajaj Allianz Life Insurance",
+        "Bajaj Life Insurance Limited",
         "https://www.bajajlifeinsurance.com/about-us.html",
         "https://www.bajajlifeinsurance.com/public-notice.html",
     ),
@@ -74,8 +74,8 @@ COMPANY_DISCLOSURE_PAGES = [
         "https://www.edelweisslife.in/about-us/investors",
     ),
     (
-        "Future Generali India Life Insurance",
-        "https://www.generalicentrallife.com/about-us/public-disclosures",
+        "Generali Central Life Insurance Company Limited",
+        "https://www.generalicentrallife.com/documents/about-us/public-disclosures",
         "https://life2.futuregenerali.in/about-us/public-disclosures/2024-2025",
     ),
     (
@@ -89,14 +89,14 @@ COMPANY_DISCLOSURE_PAGES = [
         "https://www.shriramlife.in/investor-relations",
     ),
     (
-        "Bharti AXA Life Insurance",
+        "Bharti Life Insurance Company Limited",
         "https://www.bhartiaxa.com/about-us/public-disclosure",
         "https://www.bhartiaxa.com/public-disclosure",
     ),
     (
-        "Reliance Nippon Life Insurance",
-        "https://www.reliancenipponlife.com/public-disclosure",
-        "https://www.reliancenipponlife.com/investor-relations",
+        "IndusInd Nippon Life Insurance Company Limited",
+        "https://www.indusindnipponlife.com/about-us/public-disclosure",
+        "https://www.indusindnipponlife.com/about-us/investor-relations",
     ),
     (
         "Aviva Life Insurance",
@@ -128,6 +128,21 @@ COMPANY_DISCLOSURE_PAGES = [
         "https://www.saharalife.com/AnnualReport.html",
         "http://saharalife.com/temp/viewreport.asp",
     ),
+    (
+        "Acko Life Insurance Limited",
+        "https://www.acko.com/life/public-disclosure/",
+        "https://www.acko.com/public-disclosure/",
+    ),
+    (
+        "Go Digit Life Insurance Limited",
+        "https://www.godigit.com/life/financials",
+        "https://www.godigit.com/public-disclosures",
+    ),
+    (
+        "Ageas Federal Life Insurance Company Limited",
+        "https://www.ageasfederal.com/public-disclosures",
+        "https://www.ageasfederal.com/investor-relations",
+    ),
 ]
 
 
@@ -148,10 +163,10 @@ def get_company_urls(company_name: str) -> tuple[str, str] | None:
 
 
 def get_all_companies() -> list[str]:
-    """Return list of all 23 company names."""
+    """Return list of all 26 company names."""
     return [name for name, _, _ in COMPANY_DISCLOSURE_PAGES]
 
 
 def get_company_count() -> int:
-    """Return total number of companies (23)."""
+    """Return total number of companies (26)."""
     return len(COMPANY_DISCLOSURE_PAGES)

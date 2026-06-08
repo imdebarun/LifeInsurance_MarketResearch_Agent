@@ -27,13 +27,17 @@ NAME_MAP = {
     "icici pru life": "ICICI Prudential Life Insurance",
     "icici prudential life": "ICICI Prudential Life Insurance",
     "icici prudential life insurance co": "ICICI Prudential Life Insurance",
-    # Max Life
-    "max life": "Max Life Insurance",
-    "max life insurance company": "Max Life Insurance",
-    "max new york life": "Max Life Insurance",
-    # Bajaj Allianz
-    "bajaj allianz": "Bajaj Allianz Life Insurance",
-    "bajaj allianz life": "Bajaj Allianz Life Insurance",
+    # Max Life / Axis Max
+    "max life": "Axis Max Life Insurance Limited",
+    "max life insurance": "Axis Max Life Insurance Limited",
+    "max life insurance company": "Axis Max Life Insurance Limited",
+    "max new york life": "Axis Max Life Insurance Limited",
+    "axis max life": "Axis Max Life Insurance Limited",
+    # Bajaj Allianz / Bajaj Life
+    "bajaj allianz": "Bajaj Life Insurance Limited",
+    "bajaj allianz life": "Bajaj Life Insurance Limited",
+    "bajaj allianz life insurance": "Bajaj Life Insurance Limited",
+    "bajaj life": "Bajaj Life Insurance Limited",
     # Tata AIA
     "tata aia": "Tata AIA Life Insurance",
     "tata aia life": "Tata AIA Life Insurance",
@@ -57,20 +61,29 @@ NAME_MAP = {
     "india first life": "IndiaFirst Life Insurance",
     # Edelweiss Tokio
     "edelweiss tokio": "Edelweiss Tokio Life Insurance",
-    # Future Generali
-    "future generali": "Future Generali India Life Insurance",
-    "future generali india": "Future Generali India Life Insurance",
+    # Future Generali / Generali Central
+    "future generali": "Generali Central Life Insurance Company Limited",
+    "future generali india": "Generali Central Life Insurance Company Limited",
+    "future generali india life insurance": "Generali Central Life Insurance Company Limited",
+    "generali central": "Generali Central Life Insurance Company Limited",
+    "generali central life": "Generali Central Life Insurance Company Limited",
     # Pramerica
     "pramerica": "Pramerica Life Insurance",
     "dhfl pramerica": "Pramerica Life Insurance",
     # Shriram Life
     "shriram life": "Shriram Life Insurance",
-    # Bharti AXA
-    "bharti axa": "Bharti AXA Life Insurance",
-    "bharti axa life": "Bharti AXA Life Insurance",
-    # Reliance Nippon
-    "reliance nippon": "Reliance Nippon Life Insurance",
-    "reliance life": "Reliance Nippon Life Insurance",
+    # Bharti AXA / Bharti Life
+    "bharti axa": "Bharti Life Insurance Company Limited",
+    "bharti axa life": "Bharti Life Insurance Company Limited",
+    "bharti axa life insurance": "Bharti Life Insurance Company Limited",
+    "bharti life": "Bharti Life Insurance Company Limited",
+    "bharti life insurance": "Bharti Life Insurance Company Limited",
+    # Reliance Nippon / IndusInd Nippon
+    "reliance nippon": "IndusInd Nippon Life Insurance Company Limited",
+    "reliance nippon life insurance": "IndusInd Nippon Life Insurance Company Limited",
+    "reliance life": "IndusInd Nippon Life Insurance Company Limited",
+    "indusind nippon": "IndusInd Nippon Life Insurance Company Limited",
+    "indusind nippon life": "IndusInd Nippon Life Insurance Company Limited",
     # Aviva
     "aviva": "Aviva Life Insurance",
     "aviva india": "Aviva Life Insurance",
@@ -88,6 +101,15 @@ NAME_MAP = {
     # Sahara
     "sahara life": "Sahara India Life Insurance",
     "sahara india life": "Sahara India Life Insurance",
+    # Acko
+    "acko life": "Acko Life Insurance Limited",
+    "acko life insurance": "Acko Life Insurance Limited",
+    # Go Digit
+    "go digit life": "Go Digit Life Insurance Limited",
+    "digit life": "Go Digit Life Insurance Limited",
+    # Ageas Federal
+    "ageas federal": "Ageas Federal Life Insurance Company Limited",
+    "idbi federal": "Ageas Federal Life Insurance Company Limited",
 }
 
 
@@ -177,18 +199,24 @@ def merge_all(
         company_web_df = company_web_df.loc[:, ~company_web_df.columns.duplicated()]
 
         # Only overlay columns that exist in both DataFrames and have live values
-        live_cols = ["company_name"] + [
+        live_cols = ["company_name", "data_as_of"] + [
             c for c in LIVE_KPI_COLS if c in company_web_df.columns
         ]
         live_subset = company_web_df[live_cols].copy()
         merged = merged.merge(live_subset, on="company_name", how="left", suffixes=("", "_web"))
 
-        for col in LIVE_KPI_COLS:
+        for col in LIVE_KPI_COLS + ["data_as_of"]:
             web_col = col + "_web"
             if web_col in merged.columns:
                 # Only replace where the company website returned a real value
                 mask = merged[web_col].notna()
                 if mask.any():
+                    if col in LIVE_KPI_COLS:
+                        merged[col] = pd.to_numeric(merged[col], errors='coerce').astype(float)
+                    else:
+                        # Ensure string type for period columns
+                        merged[col] = merged[col].astype(str)
+                        
                     merged.loc[mask, col] = merged.loc[mask, web_col]
                     merged.loc[mask, "source"] = "company_website_live"
                 merged.drop(columns=[web_col], inplace=True)
@@ -199,7 +227,12 @@ def merge_all(
         )
 
     # ─────────────────────────────────────────────────────────────────────
-    merged["data_as_of"] = "FY 2023-24"
+    # If data_as_of is missing (e.g. from IRDAI or CSR), default it to the latest known or current FY
+    if "data_as_of" not in merged.columns:
+        merged["data_as_of"] = "FY 2023-24"
+    else:
+        merged["data_as_of"] = merged["data_as_of"].fillna("FY 2023-24")
+
     merged["scraped_at"] = datetime.now().isoformat()
 
     logger.info(f"Merged DataFrame: {len(merged)} companies, {len(merged.columns)} columns.")

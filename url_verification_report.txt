@@ -1,0 +1,197 @@
+================================================================================
+Life Insurance Company Disclosure URLs Verification Report
+Generated: 2026-05-09 12:43:16
+================================================================================
+
+Company: SBI Life Insurance
+Primary URL: https://www.sbilife.co.in/en/about-us/investor-relations/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 48
+Response Time: 484.68ms
+--------------------------------------------------------------------------------
+
+Company: HDFC Life Insurance
+Primary URL: https://www.hdfclife.com/about-us/investor-relations/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 2611
+Response Time: 286.5ms
+--------------------------------------------------------------------------------
+
+Company: ICICI Prudential Life Insurance
+Primary URL: https://www.iciciprulife.com/about-us/investor-relations/yearly-public-disclosures.html
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 3654
+Response Time: 939.7ms
+--------------------------------------------------------------------------------
+
+Company: Max Life Insurance
+Primary URL: https://www.axismaxlife.com/newsroom/public-disclosures
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 39
+Response Time: 146.66ms
+--------------------------------------------------------------------------------
+
+Company: Bajaj Allianz Life Insurance
+Primary URL: https://www.bajajlifeinsurance.com/about-us.html
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 27
+Response Time: 539.19ms
+--------------------------------------------------------------------------------
+
+Company: Tata AIA Life Insurance
+Primary URL: https://www.tataaia.com/public-disclosures/public-disclosures.html
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 17
+Response Time: 1643.84ms
+--------------------------------------------------------------------------------
+
+Company: Aditya Birla Sun Life Insurance
+Primary URL: https://lifeinsurance.adityabirlacapital.com/about-us/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 3
+Response Time: 525.32ms
+--------------------------------------------------------------------------------
+
+Company: Kotak Mahindra Life Insurance
+Primary URL: https://insurance.kotak.com/about-us/corporate-governance/public-disclosures
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 10
+Response Time: 286.66ms
+--------------------------------------------------------------------------------
+
+Company: PNB MetLife India Insurance
+Primary URL: https://www.pnbmetlife.com/investor-relations/public-disclosures.html
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 6
+Response Time: 1135.68ms
+--------------------------------------------------------------------------------
+
+Company: Canara HSBC Life Insurance
+Primary URL: https://www.canarahsbclife.com/public-disclosures.html
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 67
+Response Time: 313.64ms
+--------------------------------------------------------------------------------
+
+Company: IndiaFirst Life Insurance
+Primary URL: https://www.indiafirstlife.com/about-us/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 66
+Response Time: 1072.21ms
+--------------------------------------------------------------------------------
+
+Company: Edelweiss Tokio Life Insurance
+Primary URL: https://www.edelweisslife.in/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 89
+Response Time: 1138.74ms
+--------------------------------------------------------------------------------
+
+Company: Future Generali India Life Insurance
+Primary URL: https://www.generalicentrallife.com/about-us/public-disclosures
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 13
+Response Time: 740.25ms
+--------------------------------------------------------------------------------
+
+Company: Pramerica Life Insurance
+Primary URL: https://www.pramericalife.in/Public_Disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 117
+Response Time: 5707.78ms
+--------------------------------------------------------------------------------
+
+Company: Shriram Life Insurance
+Primary URL: https://www.shriramlife.in/slp/publicdisclosure.aspx
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 2
+Response Time: 2407.18ms
+--------------------------------------------------------------------------------
+
+Company: Bharti AXA Life Insurance
+Primary URL: https://www.bhartiaxa.com/about-us/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 2276
+Response Time: 251.31ms
+--------------------------------------------------------------------------------
+
+Company: Reliance Nippon Life Insurance
+Primary URL: https://www.reliancenipponlife.com/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 4412
+Response Time: 1503.0ms
+--------------------------------------------------------------------------------
+
+Company: Aviva Life Insurance
+Primary URL: https://www.avivaindia.com/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 3
+Response Time: 3427.32ms
+--------------------------------------------------------------------------------
+
+Company: Star Union Dai-ichi Life Insurance
+Primary URL: https://www.sudlife.in/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 0
+Response Time: 764.74ms
+--------------------------------------------------------------------------------
+
+Company: Aegon Life Insurance
+Primary URL: https://www.aegonlife.com/about-aegon-life/investor-relations
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 0
+Response Time: 329.8ms
+--------------------------------------------------------------------------------
+
+Company: Bandhan Life Insurance
+Primary URL: https://www.bandhanlife.com/public-disclosure
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 13
+Response Time: 2546.38ms
+--------------------------------------------------------------------------------
+
+Company: Credit Access Life Insurance
+Primary URL: https://calife.in/public-disclosures/
+Status: ❌ FAILED
+HTTP Status: 404
+Error: HTTP 404
+PDFs Found: 0
+Response Time: 783.95ms
+--------------------------------------------------------------------------------
+
+Company: Sahara India Life Insurance
+Primary URL: https://www.saharalife.com/AnnualReport.html
+Status: ✅ ACCESSIBLE
+HTTP Status: 200
+PDFs Found: 13
+Response Time: 1155.81ms
+--------------------------------------------------------------------------------
+
+================================================================================
+SUMMARY
+================================================================================
+Total Companies: 23
+Accessible: 22
+Failed: 1
+Success Rate: 95.7%
